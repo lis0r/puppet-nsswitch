@@ -51,4 +51,6 @@ automount:  <%= [*$::nsswitch::automount].join(" ") %>
 <% if $::nsswitch::aliases { -%>
 aliases:    <%= [*$::nsswitch::aliases].join(" ") %>
 <% } -%>
-
+<% if $::nsswitch::initgroups { -%>
+initgroups: <%= [*$::nsswitch::initgroups].join(" ") %>
+<% } -%>

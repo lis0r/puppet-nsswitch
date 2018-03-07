@@ -39,6 +39,7 @@ class nsswitch::params {
       $publickey_default  = ['nisplus']
       $rpc_default        = ['files']
       $sudoers_default    = undef
+      $initgroups_default = undef
     }
     'Fedora': {
       $aliases_default    = ['files','nisplus']
@@ -60,6 +61,7 @@ class nsswitch::params {
       $services_default   = ['files']
       $shadow_default     = ['files']
       $sudoers_default    = undef
+      $initgroups_default = undef
     }
     /Ubuntu|Debian/: {
       $aliases_default    = undef
@@ -79,6 +81,7 @@ class nsswitch::params {
       $services_default   = ['db','files']
       $shadow_default     = ['compat']
       $sudoers_default    = undef
+      $initgroups_default = undef
     }
     'SLES': {
       $aliases_default    = ['files']
@@ -98,6 +101,7 @@ class nsswitch::params {
       $services_default   = ['files']
       $shadow_default     = undef
       $sudoers_default    = undef
+      $initgroups_default = undef
     }
     'Solaris': {
       $passwd_default       = ['files','nisplus']
@@ -117,6 +121,7 @@ class nsswitch::params {
       $aliases_default      = ['files','nisplus']
       $shadow_default       = undef
       $sudoers_default      = undef
+      $initgroups_default = undef
     }
     'Gentoo': {
       $aliases_default    = ['files']
@@ -136,6 +141,7 @@ class nsswitch::params {
       $services_default   = ['db','files']
       $shadow_default     = ['compat']
       $sudoers_default    = undef
+      $initgroups_default = undef
     }
     default: {
       fail("${facts['operatingsystem']} is not a supported operating system.")

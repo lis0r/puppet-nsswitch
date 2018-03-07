@@ -58,6 +58,7 @@ describe 'nsswitch', :type => :class do
           :services   => 'foo',
           :shadow     => 'foo',
           :sudoers    => 'foo',
+          :initgroups => 'foo',
         }
       }
 
@@ -83,6 +84,7 @@ describe 'nsswitch', :type => :class do
           :services   => ['foo'],
           :shadow     => ['foo'],
           :sudoers    => ['foo'],
+          :initgroups => ['foo'],
         }
       }
 

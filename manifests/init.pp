@@ -91,6 +91,11 @@
 #   Sudoers policy module users.
 #   *Variant* (defaults to $nsswitch::params::sudoers_default)
 #
+# @param initgroups
+#
+#   Groups of users, used by getgrouplist() and related functions.
+#   *Variant* (defaults to $nsswitch::params::initgroups_default)
+#
 # @example Basic example
 #    include nsswitch
 #
@@ -122,6 +127,7 @@ class nsswitch (
   Variant[String, Array, Undef] $shadow     = $nsswitch::params::shadow_default,
   Variant[String, Array, Undef] $gshadow    = $nsswitch::params::gshadow_default,
   Variant[String, Array, Undef] $sudoers    = $nsswitch::params::sudoers_default,
+  Variant[String, Array, Undef] $initgroups = $nsswitch::params::initgroups_default,
 ) inherits nsswitch::params {
 
   file { 'nsswitch.conf':
